@@ -83,7 +83,7 @@
         echo "</div>";
     }
 
-    if ((empty($_POST['nums1']) && intval($_POST['m']) > 0) || (empty($_POST['nums2']) && intval($_POST['n']) > 0)) {
+    if ((empty($_POST['nums1']) && !empty($_POST['m']) && intval($_POST['m']) > 0) || (empty($_POST['nums2']) && !empty($_POST['n']) && intval($_POST['n']) > 0)) {
         echo "<script>alert('Peringatan: Array Nums1 atau Nums2 kosong tetapi jumlah elemen diisi lebih dari 0.');</script>";
     }
 
